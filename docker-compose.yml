@@ -2,7 +2,7 @@ version: "3"
 
 services:
   nginx:
-    image: fabrik/docker-eshop/nginx
+    image: fabrik/docker-eshop-nginx
     restart: unless-stopped
     volumes:
       - ./:/srv/www
@@ -12,7 +12,7 @@ services:
     networks:
       - docker-eshop
   phpfpm:
-    image: fabrik/docker-eshop/php
+    image: fabrik/docker-eshop-php
     restart: unless-stopped
     volumes:
       - ./:/srv/www
